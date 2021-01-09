@@ -1,0 +1,36 @@
+<!--Aqui vai ficar todo o conteúdo do banner-->
+<header id="home">
+    <nav id="myNavBar">
+      <a class="myLogo" href="#">
+          <img  src="imagens/logoB.png" width="50"  alt="">
+      </a>
+      
+        
+        <ul class="nav-links-nav">
+          <% itensMenu.forEach( function(iten){%>
+            <li class="menu-item"><a href=<%=iten.link%> class="menu-link"><%=iten.item%></a></li>
+          <% }) %>
+        </ul>
+
+        <div class="hamburguer">
+          <div class="line" id="line1"></div>
+          <div class="line" id="line2"></div>
+          <div class="line" id="line3"></div>
+          <span>fechar</span>
+        </div>
+    </nav>
+    <div class="img-wrapper">
+        <img src="imagens/bg.png" alt="">
+    </div>
+    <div class="banner">
+        <h2 id="hello" class="titulo">
+          Olá,
+        </h2>
+        <h2 id="iam" class="titulo">
+          Eu sou
+        </h2>
+        <h1 id="mateus" class="titulo">
+          Mateus Faustino
+        </h1>
+    </div>
+</header>

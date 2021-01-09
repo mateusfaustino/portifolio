@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include ('partials/metatags.ejs')%>
+    <link rel="icon" href="./images/ico.png" type="image/png">
+    <%-include ('partials/fonts.ejs')%>
+   <link rel="stylesheet" href="./css/style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+   <title>Mateus Faustino</title>
+</head>
+<body>
+  <div class="container">
+    <%-include ('partials/header.ejs')%>
+    <%-include ('partials/sidebar.ejs')%>
+    <div class="content">
+      <section class="sobremim conteudo" id="sobremim">
+        <div class="sessao-header" >
+          <h2 style="color: black;">Sobre mim</h2>
+        </div>
+        
+        <div class="sobremim-linhas">
+          <div class="sobremim-container">
+            <img src="imagens/mateus.png" width="300px" alt="">
+            <div class="sobremim-resumo-container">
+              <% sobremim.forEach( function(paragrafo){%>
+                <% if (paragrafo.key == "resumo"){ %>
+                  <p><%=paragrafo.texto%></p>
+                <%}%>
+              <%})%>
+            </div>
+          </div>
+          
+          <div class="text-container">
+            <% sobremim.forEach( function(paragrafo){%>
+              <% if (paragrafo.key != "resumo"){ %>
+                <div class="sobremim-text-header">
+                  <h3><%=paragrafo.key%></h3>
+                </div>
+                <p><%=paragrafo.texto%></p>
+              <%}%>
+            <%})%>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="conteudo">
+        <div class="sessao-header">
+          <h2>Contato</h2>
+        </div>
+        <div class="text-container">
+          <p>
+            Entre em contato comigo enviando um email para <a href="mailto:mateusfaustino2017@gmail.com" style="color:#0081AF; font-weight: bold;">mateusfaustino2017@gmail.com</a>,
+            ou se preferir, envie um whatsapp para <a href="https://api.whatsapp.com/send?phone=5585986854058" style="color:#0081AF; font-weight: bold;">55 85 986854058</a>.
+            Ficarei feliz em te atender!
+          </p>
+        </div>
+        
+        
+      </section>
+    </div>
+    
+    <%-include('partials/footer.ejs')%>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

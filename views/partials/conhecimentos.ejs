@@ -1,0 +1,42 @@
+<section class="sessao-conhecimentos" id="conhecimentos">
+    <div class="sessao-header">
+      <h2>Conhecimentos</h2>
+    </div>
+    
+
+    
+    <div class="areas">
+      <% areas.forEach( function(area){%>
+        <div class="area">
+          <div class="area-header">
+            <h3><%=area%></h3>
+          </div>
+          <div class="myConhecimentos">
+        <% conhecimentos.forEach( function(conhecimento){%>
+          <% if(conhecimento.area == area){ %>
+            <div class="conhecimento">
+              <div class="conhecimento-header">
+                <i class="<%=conhecimento.iconTag%>"></i>
+                <h3><%=conhecimento.nome%></h3>
+              </div>
+              <div class="conhecimento-text">
+                <p><%=conhecimento.description%></p>
+              </div>
+            </div>
+            
+        <%}%>
+           
+          
+        <% }) %>
+          </div>
+      <% }) %>
+        </div>  
+      
+    </div>
+      
+      <!--<div class="conhecimentos-img-wrapper">
+        <img src="imagens/conhecimentos.svg" alt="imagem conhecimento">
+      </div>-->
+</div>
+
+</section>
