@@ -1,4 +1,4 @@
-const porta = 4000;
+const porta = 80;
 const express = require("express");
 const app = express();
 /*const connection = require("./database/database");*/
@@ -28,6 +28,7 @@ var itensMenu=[
     {item:"Home", link:"#"},
     {item:"Sobre mim", link:"#sobremim"},
     {item:"Contato", link:"#contato"},
+    {item:"Blog", link:"#"},
 ]
 
 var areas =[

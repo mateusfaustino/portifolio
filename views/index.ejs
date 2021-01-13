@@ -16,9 +16,7 @@
     <%-include ('partials/sidebar.ejs')%>
     <div class="content">
       <section class="sobremim conteudo" id="sobremim">
-        <div class="sessao-header" >
-          <h2 style="color: black;">Sobre mim</h2>
-        </div>
+        
         
         <div class="sobremim-linhas">
           <div class="sobremim-container">
@@ -31,6 +29,7 @@
               <%})%>
             </div>
           </div>
+          <%-include("partials/social-list.ejs")%>
           
           <div class="text-container">
             <% sobremim.forEach( function(paragrafo){%>

@@ -13,9 +13,10 @@
     scroll-behavior: smooth;
   }
   .conteudo{
-    padding: 10% 10% 10% 10%;
+    padding: 10% 20% 10% 20%;
     
-    box-shadow: 0 2px 5px 2px rgba(0,0,0,.5);
+    
+    box-shadow: 0 2px 5px 2px #bbb;
   }
 
   /*Aqui todos os estilos referentes ao Hamburger*/
@@ -93,17 +94,18 @@
   }
   #myNavBar{
     display: flex;
-    background-color: #d6d6d6ff;
-    justify-content: space-between;
+    background-color: #fff;
+    justify-content: center;
     padding-right: 100px;
-    box-shadow: 0 4px 2px -2px black;
+    box-shadow: 0 2px 5px 2px #bbb;
+    
   }
   .myLogo{
     margin: 20px;
   }
   .nav-links-nav{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 
   }
@@ -131,17 +133,24 @@
     object-fit: cover;
     opacity: 0.8;
     object-position: right;
-    animation: zoom 25s;
+    animation: zoom  3.7s;
     
   }
 
   /*Efeito do banner se aproximando*/
   @keyframes zoom {
     0% {
-      transform: scale(1.3);
+      transform: scale(2);
+    }
+    25% {
+      transform: scale(2);
+      
+    }
+    75% {
+      transform: scale(2);
     }
     100% {
-      transform: scale(1.1);
+      transform: scale(1);
     }
   }
 
@@ -160,26 +169,77 @@
   #hello{
     font-size: 7vw;
     color: black;
-    animation: moveBanner 2s 0.5s forwards;
+    animation: moveBanner-hello 5s 1s forwards;
   }
   #iam{
     font-size: 7vw;
     color: black;
-    animation: moveBanner 1.5s 0.5s forwards;
+    animation: moveBanner-iam 3s 1s forwards;
   }
   #mateus{
     font-size: 7vw;
+    font-family: 'Courgette', cursive;
+
     color:#0081AF;
-    animation: moveBanner 1s 0.5s forwards;
+    text-shadow: #D6D6D6;
+    animation: moveBanner-mateus 2s 1s forwards;
+    
   }
 
-  @keyframes moveBanner {
+  @keyframes moveBanner-hello {
     0% {
-      transform: translateY(10rem) rotateY(-30deg);
+      transform: translateY(20rem) rotateY(-30deg) scale(1);
+      
+    }
+    25% {
+      transform: translateY(0) rotateY(0) scale(1);
+      opacity: 1;
+      
+    }
+    75% {
+      transform: translateY(0) rotateY(0) scale(1);
+      opacity: 1;
       
     }
     100% {
-      transform: translateY(0) rotateY(0);
+      transform: translateY(0) rotateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes moveBanner-iam {
+    0% {
+      transform: translateY(20rem) rotateY(-30deg) scale(1);
+      
+    }
+    25% {
+      transform: translateY(20rem) rotateY(-30deg) scale(1);
+      
+    }
+    75% {
+      transform: translateY(0) rotateY(0) scale(1);
+      opacity: 1;
+      
+    }
+    100% {
+      transform: translateY(0) rotateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes moveBanner-mateus {
+    0% {
+      transform: translateX(-100rem) rotateY(-30deg) scale(1);
+      
+    }
+    25% {
+      transform: translateX(-100rem) rotateY(-30deg) scale(1);
+      
+    }
+    75% {
+      transform: translateX(-100rem) rotateY(-30deg) scale(1);
+      
+    }
+    100% {
+      transform: translateX(0) rotateY(0) scale(1);
       opacity: 1;
     }
   }
@@ -215,14 +275,19 @@
   
   .menu-link {
     font-family: var(--font-action);
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #fff;
-    transition: color 1s;
+    transition: padding 1s,color 1s,box-shadow 1s,font-size 1s;
    
   }
   
   .menu-link:hover {
     color: #0081AF;
+    box-shadow: 0 2px 5px 2px #bbb;
+    padding: 20px;
+    font-size: 2rem;
+    
+
   }
 
   .social-media {
@@ -447,19 +512,7 @@
   }
  
 
-  @keyframes moveText {
-    0% {
-      transform: translateY(-5rem) rotateY(-30deg);
-      
-    }
-    100% {
-      transform: translateY(0) rotateY(0);
-      opacity: 1;
-      bottom: 2rem;
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+ 
 /*Aqui todos os estilos referentes a seção sobre mim*/  
   .sobremim{
     
@@ -473,6 +526,7 @@
     flex-wrap: wrap;
     align-items: flex-end;
     margin-bottom: 50px;
+    
     
   }
   .sobremim-linhas{
@@ -514,7 +568,7 @@
   
   .sobremim-container img{
     width:100%;
-    max-width: 300px;
+    max-width: 200px;
   }
   
 
@@ -705,7 +759,19 @@
       box-shadow: 0 4px 2px -2px black;
     }
     
-    
+    @keyframes moveText {
+      0% {
+        transform: translateY(-5rem) rotate(0.5turn);
+        
+      }
+      100% {
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+        bottom: 2rem;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
     
     .titulo{
     
@@ -716,6 +782,18 @@
       font-size: 18vw;
       text-shadow: 2px 2px #D6D6D6;
      
+    }
+    .conteudo{
+      padding: 10% 10% 10% 10%;
+    }
+    .menu-link:hover {
+      color: yellow;
+      box-shadow: 0 0px 0px 0px #bbb;
+      padding: 0px;
+      margin-top: 20px;
+      border-bottom: solid 1px yellow;
+  
+  
     }
     
     
